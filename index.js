@@ -1,10 +1,9 @@
 for(var i=0;i<document.querySelectorAll(".drum").length;i++){
 	document.querySelectorAll(".drum")[i].addEventListener("click",function(){
-		this.style.color="white";
 
 		var buttonInnerHTML = this.innerHTML;
-
-		switch (buttonInnerHTML) {
+		switch (buttonInnerHTML)
+		{
 			case "w":
 				var tom1= new Audio("sounds/tom-1.mp3");
 				tom1.play();
@@ -33,10 +32,7 @@ for(var i=0;i<document.querySelectorAll(".drum").length;i++){
 				var crash= new Audio("sounds/crash.mp3");
 				crash.play();
 			break;
-
-				break;
-			default:
-
+			default: console.log(buttonInnerHTML);
 		}
 
 	});
