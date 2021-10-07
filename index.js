@@ -51,7 +51,6 @@ for(var i=0;i<document.querySelectorAll(".drum").length;i++){
 	function btnAnimate(currentkey){
 		var activebtn=document.querySelector("."+currentkey);
 		activebtn.classList.add("pressed");
-	// 	delay(100ms);
-	// 	activebtn.classList.remove("pressed");
-	// }
+		setTimeout(function(){activebtn.classList.remove("pressed")}, 100);
+	}
 }
