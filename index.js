@@ -2,11 +2,13 @@ for(var i=0;i<document.querySelectorAll(".drum").length;i++){
 
 	document.querySelectorAll(".drum")[i].addEventListener("keypress",function(event){
 		makeSound(event.key);
+		btnAnimate(event.key);
 	});
 
 	document.querySelectorAll(".drum")[i].addEventListener("click",function(){
 		var buttonInnerHTML = this.innerHTML;
 		makeSound(buttonInnerHTML);
+		btnAnimate(buttonInnerHTML);
 	});
 
 
@@ -44,9 +46,12 @@ for(var i=0;i<document.querySelectorAll(".drum").length;i++){
 			break;
 			default: console.log(buttonInnerHTML);
 		}
-
-
-
-
 	}
+
+	function btnAnimate(currentkey){
+		var activebtn=document.querySelector("."+currentkey);
+		activebtn.classList.add("pressed");
+	// 	delay(100ms);
+	// 	activebtn.classList.remove("pressed");
+	// }
 }
